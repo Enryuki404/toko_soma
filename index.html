@@ -160,6 +160,12 @@ img{max-width:100%}
 .prod:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#cfe8ff}
 .prod-top{height:132px;background:linear-gradient(180deg,#f0f9ff 0%, #ffffff 100%);display:grid;place-items:center;position:relative;border-bottom:1px solid var(--slate-100)}
 .prod-top i{font-size:2.6rem;color:var(--navy)}
+.prod-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .3s ease}
+.prod-top:hover .prod-photo{transform:scale(1.05)}
+.prod-zoom{position:absolute;right:10px;bottom:10px;font-size:.7rem;font-weight:700;background:rgba(10,61,98,.85);color:#fff;padding:.32rem .6rem;border-radius:999px;display:flex;gap:.35rem;align-items:center;backdrop-filter:blur(4px)}
+.nib-lab{border-color:#bbf7d0;background:linear-gradient(135deg,#f0fdf4 0%, #ffffff 100%)}
+.nib-lab:hover{border-color:#4ade80;box-shadow:0 8px 24px rgba(34,197,94,.14)}
+.nib-lab .nib-meta b i{color:var(--green)}
 .prod-badge{position:absolute;left:12px;top:12px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--navy);color:#fff;padding:.32rem .55rem;border-radius:999px}
 .prod-body{padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
 .prod h3{font-size:1.02rem}
@@ -320,6 +326,15 @@ footer a:hover{color:#fff}
           <span class="nib-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
         </div>
         <p style="margin-top:8px;font-size:.76rem;color:var(--slate-500);display:flex;align-items:center;gap:.4rem"><i class="fa-solid fa-shield-halved" style="color:var(--green)"></i> Klik kartu untuk lihat dokumen NIB asli sebagai watermark legalitas.</p>
+        <div class="nib-inline nib-lab reveal" id="openLab1" role="button" tabindex="0" aria-label="Lihat hasil uji lab Dinas Kesehatan — E.coli nol, klik untuk perbesar" style="transition-delay:.05s">
+          <div class="nib-thumb"><img src="assets/lab-dinkes.jpg" alt="Hasil uji lab Dinkes Surakarta — kop Laboratorium Kesehatan" loading="lazy" width="112" height="112"></div>
+          <div class="nib-meta">
+            <b><i class="fa-solid fa-flask-vial"></i> Teruji Lab Dinkes • E.coli 0<span style="font-size:.7rem;font-weight:700;background:var(--green);color:#fff;padding:.2rem .5rem;border-radius:999px">LULUS</span></b>
+            <p>Dinkes Surakarta • 23 Juni 2023 • Sesuai Permenkes 492/2010</p>
+          </div>
+          <span class="nib-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+        <p style="margin-top:8px;font-size:.76rem;color:var(--slate-500);display:flex;align-items:center;gap:.4rem"><i class="fa-solid fa-microscope" style="color:var(--green)"></i> Air DAMIU Toko Soma lolos uji bakteriologis — Total E.coli <b>0 per 100 ml</b>. Klik untuk lihat surat hasil lab.</p>
         <a href="#kontak" style="margin-top:12px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#f0f9ff 0%, #ffffff 100%);border:1px solid #dbeafe;border-radius:16px;padding:10px 12px;transition:.2s" aria-label="Lihat peta Toko Soma di Kontak & Lokasi">
           <span style="width:56px;height:56px;border-radius:10px;overflow:hidden;border:1px solid var(--slate-200);flex:0 0 56px;display:grid;place-items:center;background:#fff;position:relative"><img src="assets/storefront.png" alt="Mini peta — Toko Soma Kestalan" loading="lazy" width="56" height="56" style="width:100%;height:100%;object-fit:cover;opacity:.92"><span style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,61,98,.42);color:#fff;font-size:.9rem"><i class="fa-solid fa-map-location-dot"></i></span></span>
           <span style="flex:1;min-width:0;line-height:1.25">
@@ -328,6 +343,14 @@ footer a:hover{color:#fff}
           </span>
           <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.78rem"><i class="fa-solid fa-arrow-right"></i></span>
         </a>
+        <div id="openTangki1" role="button" tabindex="0" aria-label="Lihat foto pasokan mobil tangki — klik untuk perbesar" style="margin-top:10px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#fffbeb 0%, #ffffff 100%);border:1px solid #fde68a;border-radius:16px;padding:10px 12px;cursor:pointer;transition:.2s">
+          <span style="width:56px;height:56px;border-radius:10px;overflow:hidden;border:1px solid var(--slate-200);flex:0 0 56px;background:#fff"><img src="assets/tangki.jpg" alt="Mobil tangki stainless memasok air ke depot" loading="lazy" width="112" height="112" style="width:100%;height:100%;object-fit:cover"></span>
+          <span style="flex:1;min-width:0;line-height:1.25">
+            <b style="color:var(--navy);font-size:.88rem;display:flex;gap:.35rem;align-items:center"><i class="fa-solid fa-truck-droplet" style="color:#d97706"></i> Pasokan Tangki Stainless</b>
+            <span style="font-size:.78rem;color:var(--slate-500);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Suplai rutin mobil tangki — stok selalu segar, bukan air tampungan lama</span>
+          </span>
+          <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#d97706;color:#fff;font-size:.78rem"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+        </div>
         <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
           <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20mau%20tanya%20jadwal%20antar%20hari%20ini." target="_blank" rel="noopener" class="btn btn-primary">Konsultasi via WA</a>
           <a href="#kontak" class="btn btn-ghost"><i class="fa-solid fa-location-dot"></i> Cek Lokasi Toko</a>
@@ -362,10 +385,10 @@ footer a:hover{color:#fff}
       </div>
       <div class="prod-grid">
         <article class="prod reveal">
-          <div class="prod-top"><span class="prod-badge">Paling laris</span><i class="fa-solid fa-bottle-water"></i></div>
+          <div class="prod-top" id="openGalon1" role="button" tabindex="0" aria-label="Lihat foto asli galon Adia Tirta — klik untuk perbesar" style="overflow:hidden;cursor:zoom-in"><span class="prod-badge">Paling laris</span><img class="prod-photo" src="assets/galon-adia.jpg" alt="Foto asli galon air isi ulang Adia Tirta 19 liter — segel merah, label resmi" loading="lazy" width="600" height="400"><span class="prod-zoom"><i class="fa-solid fa-magnifying-glass-plus"></i> Foto asli</span></div>
           <div class="prod-body">
             <h3>Isi Ulang Galon 19L</h3>
-            <p>Air minum filtrasi 5 tahap + UV. Cocok untuk keluarga, kos, dan kantor.</p>
+            <p>Galon bermerek Adia Tirta — segel & label resmi, filtrasi 5 tahap + UV. Cocok untuk keluarga, kos, dan kantor.</p>
             <div class="price"><b>Rp 7.000</b><span>/ galon</span></div>
             <a class="btn" href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20pesan%20Isi%20Ulang%20Galon%2019L%20sebanyak%20*2%20galon*%20antar%20ke%20alamat%20saya." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pesan via WA</a>
           </div>
@@ -616,6 +639,56 @@ footer a:hover{color:#fff}
     </div>
   </div>
 </div>
+<!-- Lightbox: Uji Lab Dinkes -->
+<div class="lightbox" id="lightboxLab" aria-hidden="true" role="dialog" aria-label="Hasil uji lab Dinas Kesehatan">
+  <div class="lightbox-panel">
+    <div class="lightbox-head">
+      <div>
+        <b><i class="fa-solid fa-flask-vial" style="color:var(--green)"></i> Lulus Uji Lab — E.coli 0 / 100 ml</b><br>
+        <span>Dinas Kesehatan Kota Surakarta • 23 Juni 2023 • No. KS.11/Lab.Kes/10-078/VI/2023</span>
+      </div>
+      <button class="lightbox-close" data-close="lightboxLab" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img class="lightbox-img" src="assets/lab-dinkes.jpg" alt="Surat hasil pemeriksaan bakteriologis air minum DAMIU Toko Soma — Total E.coli 0" loading="lazy" style="object-fit:contain;max-height:68vh;background:#fff;padding:12px">
+    <div class="lightbox-foot">
+      <p style="font-size:.82rem"><i class="fa-solid fa-circle-check" style="color:var(--green)"></i> Memenuhi baku mutu Permenkes RI No. 492/2010 — kadar maksimal E.coli 0 per 100 ml sampel.</p>
+      <span style="font-size:.72rem;font-weight:700;background:#dcfce7;color:#166534;padding:.32rem .6rem;border-radius:999px;border:1px solid #bbf7d0"><i class="fa-solid fa-award"></i> Air layak minum</span>
+    </div>
+  </div>
+</div>
+<!-- Lightbox: Galon Adia Tirta -->
+<div class="lightbox" id="lightboxGalon" aria-hidden="true" role="dialog" aria-label="Foto galon Adia Tirta">
+  <div class="lightbox-panel">
+    <div class="lightbox-head">
+      <div>
+        <b><i class="fa-solid fa-bottle-water" style="color:var(--navy)"></i> Galon 19L — Adia Tirta</b><br>
+        <span>Foto asli produk • Segel merah & label resmi • Sehat Segar</span>
+      </div>
+      <button class="lightbox-close" data-close="lightboxGalon" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img class="lightbox-img" src="assets/galon-adia.jpg" alt="Foto asli galon Adia Tirta 19 liter — jernih, segel merah, label resmi" loading="lazy">
+    <div class="lightbox-foot">
+      <p><i class="fa-solid fa-droplet" style="color:var(--aqua-3)"></i> Isi ulang Rp 7.000/galon — pesan via WhatsApp, diantar 07.00–21.00.</p>
+      <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20pesan%20Isi%20Ulang%20Galon%2019L." target="_blank" rel="noopener" class="btn btn-aqua" style="padding:.55rem 1rem;font-size:.86rem"><i class="fa-brands fa-whatsapp"></i> Pesan</a>
+    </div>
+  </div>
+</div>
+<!-- Lightbox: Tangki -->
+<div class="lightbox" id="lightboxTangki" aria-hidden="true" role="dialog" aria-label="Foto pasokan mobil tangki">
+  <div class="lightbox-panel">
+    <div class="lightbox-head">
+      <div>
+        <b><i class="fa-solid fa-truck-droplet" style="color:#d97706"></i> Pasokan Tangki Stainless</b><br>
+        <span>Suplai rutin ke depot Jl. Sutan Syahrir No.241 • Stok selalu segar</span>
+      </div>
+      <button class="lightbox-close" data-close="lightboxTangki" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img class="lightbox-img" src="assets/tangki.jpg" alt="Mobil tangki stainless memasok air ke depot Adia Tirta / Toko Soma" loading="lazy">
+    <div class="lightbox-foot">
+      <p><i class="fa-solid fa-rotate" style="color:#d97706"></i> Bongkar muat langsung di depan depot — bukan air tampungan lama.</p>
+    </div>
+  </div>
+</div>
 
 <script>
 const ham = document.getElementById('hamburger');
@@ -648,7 +721,7 @@ const ro = new IntersectionObserver(es=>{
   es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); }});
 },{threshold:.12});
 reveals.forEach(r=> ro.observe(r));
-// lightbox logic — storefront + NIB
+// lightbox logic — storefront + NIB + lab + galon + tangki
 function bindLightbox(triggerIds, lightboxId){
   const lb = document.getElementById(lightboxId);
   if(!lb) return;
@@ -666,6 +739,9 @@ function bindLightbox(triggerIds, lightboxId){
 }
 bindLightbox(['openStorefront','kenaliToko'], 'lightboxStore');
 bindLightbox(['openNib1','footerNib'], 'lightboxNib');
+bindLightbox(['openLab1'], 'lightboxLab');
+bindLightbox(['openGalon1'], 'lightboxGalon');
+bindLightbox(['openTangki1'], 'lightboxTangki');
 </script>
 </body>
 </html>

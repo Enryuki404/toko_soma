@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toko Soma — Air Minum Sehat untuk Keluarga Surakarta</title>
+<meta name="description" content="Toko Soma — Depot air minum isi ulang higienis di Jl. Sutan Syahrir No. 241, Kestalan, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57133 (pin akurat via share.google/80jHfEQTl3V8wjQzo, dekat Pasar Legi). Antar cepat 30 menit, filtrasi 5 tahap, buka 07.00–21.00 WIB. Pesan via WhatsApp 0822-3683-9529.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{
+  --navy:#0a3d62;
+  --navy-2:#0e4d78;
+  --navy-dark:#082f4a;
+  --aqua:#22d3ee;
+  --aqua-2:#6bc7f0;
+  --aqua-3:#0ea5e9;
+  --green:#25d366;
+  --green-dark:#128c7e;
+  --slate-50:#f8fafc;
+  --slate-100:#f1f5f9;
+  --slate-200:#e2e8f0;
+  --slate-300:#cbd5e1;
+  --slate-500:#64748b;
+  --slate-700:#334155;
+  --slate-900:#0f172a;
+  --radius:20px;
+  --radius-lg:24px;
+  --shadow:0 8px 32px rgba(10,61,98,.08), 0 2px 8px rgba(10,61,98,.06);
+  --shadow-lg:0 20px 48px rgba(10,61,98,.12), 0 8px 16px rgba(10,61,98,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--slate-700);background:#fcfdff;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:'Plus Jakarta Sans',Inter,sans-serif;color:var(--navy);letter-spacing:-.02em;line-height:1.15}
+a{color:inherit;text-decoration:none}
+img{max-width:100%}
+.container{width:min(1160px,92vw);margin-inline:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:600;font-size:.95rem;padding:.85rem 1.35rem;border-radius:999px;transition:.2s ease;border:1.5px solid transparent;cursor:pointer;white-space:nowrap}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:0 8px 20px rgba(10,61,98,.22)}
+.btn-primary:hover{background:var(--navy-dark);transform:translateY(-1px)}
+.btn-aqua{background:var(--green);color:#fff;box-shadow:0 8px 20px rgba(37,211,102,.28)}
+.btn-aqua:hover{background:#1fb85a;transform:translateY(-1px)}
+.btn-ghost{background:#fff;border-color:var(--slate-200);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--navy);background:#fff}
+.badge{display:inline-flex;align-items:center;gap:.5rem;font-size:.78rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--navy);background:#e6f6ff;border:1px solid #cfe8ff;padding:.42rem .75rem;border-radius:999px}
+.badge .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 0 4px rgba(37,211,102,.2)}
+.card{background:#fff;border:1px solid var(--slate-200);border-radius:var(--radius);box-shadow:var(--shadow)}
+.section{padding:56px 0;scroll-margin-top:72px}
+.section-head{max-width:720px;margin:0 auto 24px;text-align:center}
+.section-head p{color:var(--slate-500);margin-top:8px}
+.kicker{color:var(--aqua-3);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.78rem;line-height:1}
+@media(max-width:860px){.section{padding:40px 0;scroll-margin-top:64px}}
+[id]{scroll-margin-top:76px}
+
+/* HEADER — tightened vertical rhythm so menu doesn't feel sunk */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid rgba(226,232,240,.9)}
+.nav-row{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:10px 0;min-height:56px}
+.brand{display:flex;align-items:center;gap:.7rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.25rem;color:var(--navy);letter-spacing:-.02em}
+.logo-mark{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:linear-gradient(135deg,var(--navy) 0%, #0ea5e9 100%);color:#fff;box-shadow:0 6px 16px rgba(10,61,98,.25)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--slate-700);padding:.5rem .72rem;border-radius:999px;transition:.18s;line-height:1}
+.nav-links a:hover,.nav-links a.active{background:var(--slate-100);color:var(--navy)}
+.header-cta{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--slate-200);background:#fff;cursor:pointer;place-items:center;color:var(--navy)}
+@media(max-width:980px){
+  .nav-links{display:none;position:absolute;left:4vw;right:4vw;top:60px;background:#fff;border:1px solid var(--slate-200);border-radius:18px;box-shadow:var(--shadow-lg);padding:10px;flex-direction:column;align-items:stretch}
+  .nav-links.open{display:flex}
+  .nav-links a{padding:.9rem 1rem}
+  .hamburger{display:grid}
+  .header-cta .btn-primary{padding:.75rem 1rem}
+}
+
+/* HERO — reduced top space so badge+h1 sit higher */
+.hero{padding:16px 0 18px;overflow:clip;scroll-margin-top:76px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(2rem,4vw,3.05rem);font-weight:800;color:var(--navy)}
+.hero h1 span{position:relative;display:inline-block}
+.hero h1 span:after{content:"";position:absolute;left:0;right:0;bottom:.18em;height:.32em;background:linear-gradient(90deg,rgba(34,211,238,.28),rgba(107,199,240,.0));z-index:-1;border-radius:4px}
+.hero-sub{font-size:1.06rem;color:var(--slate-500);margin:16px 0 22px;max-width:56ch;line-height:1.7}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.trust{margin-top:26px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-top:18px;border-top:1px dashed var(--slate-200)}
+.trust b{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.35rem;color:var(--navy);line-height:1}
+.trust span{font-size:.82rem;color:var(--slate-500)}
+.visual{position:relative;padding:14px}
+.visual-card{position:relative;background:linear-gradient(180deg,#ffffff 0%, #f0f9ff 100%);border:1px solid #dbeafe;border-radius:28px;box-shadow:var(--shadow-lg);padding:22px 22px 20px;overflow:hidden;display:flex;flex-direction:column}
+.mesh{position:absolute;inset:0 0 auto 0;height:52%;background:radial-gradient(600px 300px at 30% 20%, rgba(34,211,238,.18), transparent 60%), radial-gradient(500px 280px at 80% 30%, rgba(14,165,233,.14), transparent 60%);pointer-events:none}
+.glass-stack{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;position:relative}
+.glass-main{background:#fff;border:1px solid var(--slate-200);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:14px;box-shadow:var(--shadow)}
+.gallon{height:168px;border-radius:16px;background:linear-gradient(180deg,#e0f2fe 0%, #ffffff 62%);border:1px solid #bae6fd;display:grid;place-items:center;position:relative;overflow:hidden}
+.gallon:before{content:"";position:absolute;inset:10% 22% 14% 22%;border-radius:16px 16px 12px 12px;background:linear-gradient(180deg,rgba(255,255,255,.9), rgba(186,230,253,.65));border:1px solid rgba(255,255,255,.9)}
+.gallon i{font-size:3.2rem;color:var(--navy);position:relative;z-index:1;filter:drop-shadow(0 8px 12px rgba(10,61,98,.18))}
+.wave{position:absolute;left:0;right:0;bottom:0;height:44%;background:linear-gradient(180deg, rgba(34,211,238,.0) 0%, rgba(34,211,238,.22) 100%);border-top:1px solid rgba(255,255,255,.6)}
+.side-cards{display:flex;flex-direction:column;gap:14px}
+.mini{border-radius:18px;padding:14px 14px;background:#fff;border:1px solid var(--slate-200);box-shadow:var(--shadow);display:flex;gap:10px;align-items:center}
+.mini i{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:#e6f6ff;color:var(--aqua-3);flex:0 0 40px}
+.float-badge{position:static;display:inline-flex;align-items:center;gap:.45rem;align-self:center;margin-top:16px;background:#0a3d62;color:#fff;font-size:.78rem;font-weight:700;padding:.52rem .85rem;border-radius:999px;box-shadow:0 8px 20px rgba(10,61,98,.25);width:fit-content;max-width:100%;line-height:1}
+/* storefront hero */
+.storefront-frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid #dbeafe;background:#fff;box-shadow:var(--shadow);height:100%;min-height:232px;display:flex;flex-direction:column;cursor:zoom-in}
+.storefront-frame img{width:100%;height:100%;min-height:232px;object-fit:cover;object-position:center 38%;display:block;transition:.5s ease}
+.storefront-frame:hover img{transform:scale(1.03)}
+.storefront-top-badge{position:absolute;top:10px;left:10px;z-index:2;display:inline-flex;align-items:center;gap:.4rem;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);color:var(--navy);font-size:.70rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:.36rem .62rem;border-radius:999px;box-shadow:0 6px 16px rgba(10,61,98,.14)}
+.storefront-top-badge i{color:var(--green);font-size:.8rem}
+.storefront-overlay{position:absolute;inset:auto 0 0 0;padding:36px 14px 12px;background:linear-gradient(180deg, rgba(10,61,98,0) 0%, rgba(10,61,98,.88) 100%);color:#fff;display:flex;flex-direction:column;gap:2px}
+.storefront-overlay b{font-family:'Plus Jakarta Sans',sans-serif;font-size:.88rem;line-height:1.2}
+.storefront-overlay span{font-size:.76rem;color:#e0f2fe;opacity:.95}
+.storefront-lens{position:absolute;right:10px;bottom:52px;z-index:2;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(10,61,98,.88);color:#fff;border:1px solid rgba(255,255,255,.22);box-shadow:0 6px 16px rgba(0,0,0,.18);font-size:.85rem}
+.nib-inline{margin-top:16px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#f0f9ff 0%, #ffffff 100%);border:1px solid #dbeafe;border-radius:16px;padding:12px 12px;cursor:pointer;transition:.22s;position:relative;overflow:hidden}
+.nib-inline:hover{border-color:#7dd3fc;box-shadow:0 8px 24px rgba(14,165,233,.12);transform:translateY(-1px)}
+.nib-inline:after{content:"";position:absolute;right:-20px;top:-20px;width:90px;height:90px;background:radial-gradient(60px 60px at 50% 50%, rgba(34,211,238,.18), transparent 70%);pointer-events:none}
+.nib-thumb{width:56px;height:56px;border-radius:12px;overflow:hidden;border:1px solid var(--slate-200);background:#fff;flex:0 0 56px;display:grid;place-items:center;box-shadow:0 4px 12px rgba(10,61,98,.08)}
+.nib-thumb img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.nib-meta{flex:1;min-width:0}
+.nib-meta b{font-size:.88rem;color:var(--navy);display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.nib-meta b i{color:#c9a86a}
+.nib-meta p{font-size:.78rem;color:var(--slate-500);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.nib-cta{flex:0 0 auto;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.85rem;box-shadow:0 6px 16px rgba(10,61,98,.18);transition:.2s}
+.nib-inline:hover .nib-cta{transform:translateX(2px);background:var(--navy-dark)}
+/* lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(8,47,74,.82);backdrop-filter:blur(10px) saturate(1.2);display:none;place-items:center;z-index:90;padding:22px}
+.lightbox.open{display:grid}
+.lightbox-panel{width:min(920px,92vw);background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 24px 64px rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.2);animation:pop .28s ease}
+@keyframes pop{from{transform:translateY(8px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+.lightbox-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;border-bottom:1px solid var(--slate-100);background:linear-gradient(180deg,#ffffff,#f8fafc)}
+.lightbox-head b{font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy);font-size:.95rem}
+.lightbox-head span{font-size:.78rem;color:var(--slate-500)}
+.lightbox-close{width:38px;height:38px;border-radius:12px;border:1px solid var(--slate-200);background:#fff;display:grid;place-items:center;cursor:pointer;color:var(--navy);transition:.2s}
+.lightbox-close:hover{background:var(--slate-50);border-color:var(--slate-300)}
+.lightbox-img{width:100%;max-height:72vh;object-fit:contain;background:#f8fafc;display:block}
+.lightbox-foot{padding:12px 16px;background:#fff;border-top:1px solid var(--slate-100);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center}
+.lightbox-foot p{font-size:.84rem;color:var(--slate-500)}
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .visual{order:-1}
+  .trust{grid-template-columns:repeat(3,1fr)}
+  .storefront-frame img{min-height:220px}
+}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:start}
+.checks{display:grid;gap:12px;margin-top:16px}
+.check{display:flex;gap:12px;align-items:flex-start}
+.check i{margin-top:2px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#e6f6ff;color:var(--navy);font-size:.85rem;flex:0 0 28px}
+.steps{background:linear-gradient(180deg,#ffffff 0%, #f8fafc 100%);border:1px solid var(--slate-200);border-radius:22px;padding:18px;box-shadow:var(--shadow)}
+.step{display:grid;grid-template-columns:36px 1fr;gap:12px;padding:12px 8px;border-radius:14px}
+.step:hover{background:#fff}
+.step-num{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:.9rem}
+.step h4{font-size:.95rem;color:var(--navy)}
+.step p{font-size:.86rem;color:var(--slate-500)}
+.divider{height:1px;background:var(--slate-100);margin:4px 0}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr}}
+
+/* PRODUCTS */
+.prod-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1024px){.prod-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.prod-grid{grid-template-columns:1fr}}
+.prod{border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--slate-200);box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.22s ease}
+.prod:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:#cfe8ff}
+.prod-top{height:132px;background:linear-gradient(180deg,#f0f9ff 0%, #ffffff 100%);display:grid;place-items:center;position:relative;border-bottom:1px solid var(--slate-100)}
+.prod-top i{font-size:2.6rem;color:var(--navy)}
+.prod-badge{position:absolute;left:12px;top:12px;font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:var(--navy);color:#fff;padding:.32rem .55rem;border-radius:999px}
+.prod-body{padding:16px 16px 14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.prod h3{font-size:1.02rem}
+.prod p{font-size:.88rem;color:var(--slate-500);line-height:1.6}
+.price{margin-top:auto;display:flex;align-items:baseline;gap:6px;padding-top:8px}
+.price b{font-family:'Plus Jakarta Sans',sans-serif;color:var(--navy);font-size:1.15rem}
+.price span{font-size:.82rem;color:var(--slate-500)}
+.prod .btn{width:100%;margin-top:10px;background:#fff;border-color:var(--slate-200);color:var(--navy)}
+.prod .btn:hover{background:var(--green);border-color:var(--green);color:#fff}
+
+/* KEUNGGULAN */
+.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:980px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
+.feat{background:#fff;border:1px solid var(--slate-200);border-radius:22px;padding:20px;box-shadow:var(--shadow);transition:.2s}
+.feat:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.feat i{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#e6f6ff, #dbeafe);color:var(--navy);font-size:1.15rem;margin-bottom:12px}
+.feat h3{font-size:1rem;margin-bottom:6px}
+.feat p{font-size:.88rem;color:var(--slate-500)}
+
+/* TESTIMONI GOOGLE MAPS */
+.rev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:900px;margin:0 auto}
+@media(max-width:640px){.rev-grid{grid-template-columns:1fr}}
+.rev{background:#fff;border:1px solid var(--slate-200);border-radius:22px;padding:20px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:12px;transition:.2s}
+.rev:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}
+.rev-head{display:flex;gap:12px;align-items:center}
+.rev-avatar{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.2rem;color:#fff;flex:0 0 48px}
+.rev-name{font-weight:700;color:var(--navy);font-size:.95rem}
+.rev-meta{font-size:.78rem;color:var(--slate-500)}
+.stars{color:#FBBC04;font-size:.9rem;letter-spacing:2px}
+.rev-text{font-size:.94rem;color:var(--slate-700);line-height:1.7}
+.rev-foot{margin-top:auto;padding-top:12px;border-top:1px dashed var(--slate-200);display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--slate-500)}
+
+/* KONTAK & LOKASI */
+.kontak-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:18px;align-items:start}
+@media(max-width:900px){.kontak-grid{grid-template-columns:1fr}}
+.contact-card{padding:20px}
+.info-list{display:grid;gap:12px;margin-top:14px}
+.info{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:16px;border:1px solid var(--slate-100);background:#f8fafc}
+.info i{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:#fff;border:1px solid var(--slate-200);color:var(--navy);flex:0 0 42px}
+.info a{color:var(--navy);font-weight:600}
+.info a:hover{text-decoration:underline}
+.map-wrap{overflow:hidden;border-radius:22px;border:1px solid var(--slate-200);box-shadow:var(--shadow-lg);background:#fff}
+.map-wrap iframe{width:100%;height:380px;border:0;display:block;filter:saturate(1.05)}
+.map-actions{display:flex;flex-wrap:wrap;gap:10px;padding:14px;background:#fff;border-top:1px solid var(--slate-100)}
+.note{font-size:.82rem;color:var(--slate-500);padding:0 14px 14px}
+.reveal{opacity:0;transform:translateY(10px);transition:.6s ease}
+.reveal.in{opacity:1;transform:none}
+:focus-visible{outline:2px solid var(--aqua-3);outline-offset:2px}
+footer{background:var(--navy);color:#cbd5e1}
+footer a{color:#e2e8f0}
+footer a:hover{color:#fff}
+.foot-grid{display:grid;grid-template-columns:1.2fr .8fr .9fr;gap:24px;padding:36px 0}
+@media(max-width:860px){.foot-grid{grid-template-columns:1fr;gap:20px}}
+.foot-brand{color:#fff}
+.foot-brand p{color:#94a3b8;font-size:.9rem;margin-top:8px}
+.copy{border-top:1px solid rgba(255,255,255,.12);padding:14px 0;font-size:.84rem;color:#94a3b8;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container nav-row">
+    <a href="#beranda" class="brand" aria-label="Toko Soma Beranda">
+      <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+      Toko Soma
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Navigasi utama">
+      <a href="#beranda" class="active">Beranda</a>
+      <a href="#tentang">Tentang</a>
+      <a href="#produk">Produk</a>
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <div class="header-cta">
+      <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20pesan%20air%20minum%20antar%20ke%20alamat%20saya." target="_blank" rel="noopener" class="btn btn-aqua" aria-label="Pesan via WhatsApp"><i class="fa-brands fa-whatsapp"></i> Pesan Sekarang</a>
+      <button class="hamburger" id="hamburger" aria-label="Buka menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="beranda" class="hero">
+    <div class="container hero-grid">
+      <div class="reveal in">
+        <span class="badge"><span class="dot"></span> Sejak 2018 • Banjarsari, Surakarta</span>
+        <h1 style="margin-top:8px">Air Minum Sehat<br>untuk <span>Keluarga Surakarta</span></h1>
+        <p class="hero-sub">Depot isi ulang higienis dengan filtrasi 5 tahap + steril UV. Jernih, segar, pH seimbang — diantar cepat ke rumah, kos, dan kantor di sekitar <b style="color:var(--navy)">Jl. Sutan Syahrir No. 241, Kestalan, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57133</b> <span style="font-size:.82rem;color:var(--slate-500)">(Kestalan, Banjarsari — dekat Pasar Legi, pin akurat via Maps)</span>.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20ingin%20pesan%20air%20galon%2019L%20antar%20sekarang." target="_blank" rel="noopener" class="btn btn-aqua"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp — 0822-3683-9529</a>
+          <a href="#produk" class="btn btn-ghost"><i class="fa-solid fa-layer-group"></i> Lihat Katalog</a>
+        </div>
+        <div class="trust">
+          <div><b>5.000+</b><br><span>Pelanggan aktif</span></div>
+          <div><b>4.9/5</b><br><span>Rating kepuasan</span></div>
+          <div><b>±30 menit</b><br><span>Antar area Solo</span></div>
+        </div>
+        <p style="margin-top:14px;font-size:.82rem;color:var(--slate-500)"><i class="fa-regular fa-clock"></i> Buka setiap hari <b style="color:var(--navy)">07.00–21.00 WIB</b> • Siap antar pagi–malam</p>
+      </div>
+
+      <div class="visual reveal in" style="transition-delay:.08s">
+        <div class="visual-card">
+          <div class="mesh" aria-hidden="true"></div>
+          <div style="display:flex;justify-content:space-between;align-items:center;position:relative;gap:12px">
+            <span style="font-weight:700;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif">Higienis • Teruji • Siap Minum</span>
+            <span style="font-size:.78rem;background:#fff;border:1px solid var(--slate-200);padding:.3rem .6rem;border-radius:999px;color:var(--slate-500)"><i class="fa-solid fa-shield-halved" style="color:var(--green)"></i> SNI & UV Steril</span>
+          </div>
+          <div class="glass-stack" style="margin-top:16px">
+            <div class="storefront-frame" id="openStorefront" role="button" tabindex="0" aria-label="Lihat foto asli Toko Soma - klik untuk perbesar">
+              <img src="assets/storefront.png" alt="Foto asli Toko Soma — papan hijau Jl. Sutan Syahrir No.241, etalase kaca dan banner Joyday di Kestalan" loading="eager" width="640" height="420">
+              <span class="storefront-top-badge"><i class="fa-solid fa-store"></i> Toko Fisik • Kestalan</span>
+              <span class="storefront-lens" aria-hidden="true"><i class="fa-solid fa-magnifying-glass-plus"></i></span>
+              <div class="storefront-overlay">
+                <b><i class="fa-solid fa-location-dot" style="color:#7dd3fc"></i> Jl. Sutan Syahrir No. 241</b>
+                <span>Kestalan, Banjarsari — kenali dari papan hijau & etalase kaca</span>
+              </div>
+            </div>
+            <div class="side-cards">
+              <div class="mini">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div><b style="color:var(--navy);font-size:.92rem">Antar Cepat</b><br><span style="font-size:.8rem;color:var(--slate-500)">Banjarsari & sekitar</span></div>
+              </div>
+              <div class="mini">
+                <i class="fa-solid fa-hand-sparkles"></i>
+                <div><b style="color:var(--navy);font-size:.92rem">Proses Steril</b><br><span style="font-size:.8rem;color:var(--slate-500)">Cuci bilas + UV</span></div>
+              </div>
+              <div class="mini" style="background:var(--navy);color:#fff;border-color:var(--navy-dark)">
+                <i style="background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.18)" class="fa-solid fa-phone"></i>
+                <div><b style="color:#fff;font-size:.92rem">0822-3683-9529</b><br><span style="font-size:.78rem;color:#cbd5e1">WhatsApp 07.00–21.00</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="float-badge"><i class="fa-solid fa-award"></i> Garansi segel utuh — foto toko asli</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="section" style="background:#fff;border-top:1px solid var(--slate-100);border-bottom:1px solid var(--slate-100)">
+    <div class="container about-grid">
+      <div class="reveal">
+        <div class="kicker">Tentang Toko Soma</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.15rem);margin-top:6px">UMKM lokal yang fokus pada kebersihan dan rasa.</h2>
+        <p style="color:var(--slate-500);margin-top:10px">Kami bukan sekadar isi ulang. Setiap galon dicuci, dibilas, difiltrasi, dan disteril sebelum disegel. Sumber air teruji, peralatan food-grade, dan kurir yang menjaga galon tetap bersih sampai pintu rumah.</p>
+        <div class="checks">
+          <div class="check"><i class="fa-solid fa-check"></i><div><b style="color:var(--navy)">Sumber & pipa food-grade</b><br><span style="font-size:.88rem;color:var(--slate-500)">Toren dan selang rutin dibersihkan, bebas lumut & bau.</span></div></div>
+          <div class="check"><i class="fa-solid fa-check"></i><div><b style="color:var(--navy)">Cuci 3 bilas + semprot steril</b><br><span style="font-size:.88rem;color:var(--slate-500)">Galon pelanggan tidak langsung diisi — kami sikat, bilas, dan steril.</span></div></div>
+          <div class="check"><i class="fa-solid fa-check"></i><div><b style="color:var(--navy)">Antar dengan alas & tutup</b><br><span style="font-size:.88rem;color:var(--slate-500)">Galon ditutup & diangkut berdiri, tidak rebah di lantai bak.</span></div></div>
+        </div>
+        <div class="nib-inline reveal" id="openNib1" role="button" tabindex="0" aria-label="Lihat legalitas NIB Toko Soma - klik untuk perbesar" style="transition-delay:.04s">
+          <div class="nib-thumb"><img src="assets/nib.webp" alt="NIB Toko Soma 8120116212506 — emblem Garuda" loading="lazy" width="112" height="112"></div>
+          <div class="nib-meta">
+            <b><i class="fa-solid fa-certificate"></i> Resmi Terdaftar • NIB 8120116212506</b>
+            <p>Kemenkumham • 10 Desember 2018 • Jl. Sutan Syahrir No.241, Kestalan</p>
+          </div>
+          <span class="nib-cta" aria-hidden="true"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+        </div>
+        <p style="margin-top:8px;font-size:.76rem;color:var(--slate-500);display:flex;align-items:center;gap:.4rem"><i class="fa-solid fa-shield-halved" style="color:var(--green)"></i> Klik kartu untuk lihat dokumen NIB asli sebagai watermark legalitas.</p>
+        <a href="#kontak" style="margin-top:12px;display:flex;gap:12px;align-items:center;background:linear-gradient(135deg,#f0f9ff 0%, #ffffff 100%);border:1px solid #dbeafe;border-radius:16px;padding:10px 12px;transition:.2s" aria-label="Lihat peta Toko Soma di Kontak & Lokasi">
+          <span style="width:56px;height:56px;border-radius:10px;overflow:hidden;border:1px solid var(--slate-200);flex:0 0 56px;display:grid;place-items:center;background:#fff;position:relative"><img src="assets/storefront.png" alt="Mini peta — Toko Soma Kestalan" loading="lazy" width="56" height="56" style="width:100%;height:100%;object-fit:cover;opacity:.92"><span style="position:absolute;inset:0;display:grid;place-items:center;background:rgba(10,61,98,.42);color:#fff;font-size:.9rem"><i class="fa-solid fa-map-location-dot"></i></span></span>
+          <span style="flex:1;min-width:0;line-height:1.25">
+            <b style="color:var(--navy);font-size:.88rem;display:flex;gap:.35rem;align-items:center"><i class="fa-solid fa-location-dot" style="color:var(--aqua-3)"></i> Temui di Toko — Kestalan</b>
+            <span style="font-size:.78rem;color:var(--slate-500);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Jl. Sutan Syahrir No.241 • dekat Pasar Legi • buka 07.00–21.00</span>
+          </span>
+          <span style="flex:0 0 auto;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-size:.78rem"><i class="fa-solid fa-arrow-right"></i></span>
+        </a>
+        <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20mau%20tanya%20jadwal%20antar%20hari%20ini." target="_blank" rel="noopener" class="btn btn-primary">Konsultasi via WA</a>
+          <a href="#kontak" class="btn btn-ghost"><i class="fa-solid fa-location-dot"></i> Cek Lokasi Toko</a>
+        </div>
+      </div>
+      <div class="steps reveal" style="transition-delay:.07s">
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <h3 style="font-size:1.05rem">Filtrasi 5 Tahap + UV</h3>
+          <span style="font-size:.78rem;font-weight:700;color:var(--navy);background:#e6f6ff;padding:.32rem .6rem;border-radius:999px">Higienis • Jernih • Segar</span>
+        </div>
+        <div class="step" style="margin-top:12px"><div class="step-num">1</div><div><h4>Sediment & Carbon</h4><p>Saring partikel, bau, dan klorin.</p></div></div>
+        <div class="divider"></div>
+        <div class="step"><div class="step-num">2</div><div><h4>RO / Micro Filtration</h4><p>Haluskan mineral, TDS rendah & rasa ringan.</p></div></div>
+        <div class="divider"></div>
+        <div class="step"><div class="step-num">3</div><div><h4>Bio Ceramic & Mineral</h4><p>Seimbangkan pH 7–7.5, lebih segar di tenggorokan.</p></div></div>
+        <div class="divider"></div>
+        <div class="step"><div class="step-num" style="background:var(--aqua-3)">4</div><div><h4>Steril UV-C</h4><p>Bunuh bakteri & virus tanpa bahan kimia.</p></div></div>
+        <div class="divider"></div>
+        <div class="step"><div class="step-num" style="background:var(--green)">5</div><div><h4>Segel & QC Akhir</h4><p>Tutup baru, tisu steril, cek kebocoran & segel.</p></div></div>
+        <p style="margin-top:12px;font-size:.82rem;color:var(--slate-500);background:#f8fafc;border:1px dashed var(--slate-200);padding:10px 12px;border-radius:12px"><i class="fa-solid fa-circle-info" style="color:var(--aqua-3)"></i> Galon pelanggan dicuci terpisah — tidak dicampur tanpa cuci.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section id="produk" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Katalog Produk</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.05rem)">Pilih sesuai kebutuhan rumah</h2>
+        <p>Harga jujur, isi penuh, segel aman. Pesan via WhatsApp — kami balas cepat 07.00–21.00.</p>
+      </div>
+      <div class="prod-grid">
+        <article class="prod reveal">
+          <div class="prod-top"><span class="prod-badge">Paling laris</span><i class="fa-solid fa-bottle-water"></i></div>
+          <div class="prod-body">
+            <h3>Isi Ulang Galon 19L</h3>
+            <p>Air minum filtrasi 5 tahap + UV. Cocok untuk keluarga, kos, dan kantor.</p>
+            <div class="price"><b>Rp 7.000</b><span>/ galon</span></div>
+            <a class="btn" href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20pesan%20Isi%20Ulang%20Galon%2019L%20sebanyak%20*2%20galon*%20antar%20ke%20alamat%20saya." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pesan via WA</a>
+          </div>
+        </article>
+        <article class="prod reveal" style="transition-delay:.05s">
+          <div class="prod-top"><i class="fa-solid fa-cubes-stacked"></i></div>
+          <div class="prod-body">
+            <h3>Galon Baru + Isi</h3>
+            <p>Galon PET food-grade baru + tutup & segel. Siap pakai, tidak perlu tukar.</p>
+            <div class="price"><b>Rp 45.000</b><span>/ unit</span></div>
+            <a class="btn" href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20pesan%20Galon%20Baru%20%2B%20Isi%2019L." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Pesan via WA</a>
+          </div>
+        </article>
+        <article class="prod reveal" style="transition-delay:.1s">
+          <div class="prod-top"><i class="fa-solid fa-pump-medical" style="transform:rotate(180deg)"></i></div>
+          <div class="prod-body">
+            <h3>Pompa & Dispenser</h3>
+            <p>Pompa elektrik, dispenser galon bawah/atas. Tanya stok & garansi.</p>
+            <div class="price"><b>Mulai Rp 35.000</b></div>
+            <a class="btn" href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20tanya%20Pompa%20%2F%20Dispenser%20yang%20ready." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Tanya stok</a>
+          </div>
+        </article>
+        <article class="prod reveal" style="transition-delay:.15s">
+          <div class="prod-top"><span class="prod-badge" style="background:var(--green)">Hemat</span><i class="fa-solid fa-truck"></i></div>
+          <div class="prod-body">
+            <h3>Langganan & Antar Rutin</h3>
+            <p>Jadwal mingguan, catat otomatis. Gratis antar area dekat, diskon mulai 10 galon/minggu.</p>
+            <div class="price"><b>Gratis ongkir*</b><span> area dekat</span></div>
+            <a class="btn" href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20saya%20mau%20daftar%20langganan%20antar%20rutin%20mingguan." target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Daftar langganan</a>
+          </div>
+        </article>
+      </div>
+      <p style="text-align:center;margin-top:16px;font-size:.84rem;color:var(--slate-500)">*Syarat ongkir mengikuti jarak. Chat WA untuk cek estimasi 30 menit ke alamatmu.</p>
+    </div>
+  </section>
+
+  <!-- KEUNGGULAN -->
+  <section id="keunggulan" class="section" style="background:linear-gradient(180deg,#f8fafc 0%, #ffffff 100%);border-top:1px solid var(--slate-100)">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Kenapa pelanggan tetap di Toko Soma</div>
+        <h2>Keunggulan yang terasa setiap tegukan</h2>
+      </div>
+      <div class="feat-grid">
+        <div class="feat reveal"><i class="fa-solid fa-droplet"></i><h3>Rasa ringan & segar</h3><p>TDS rendah, tidak eneg. Anak-anak sampai orang tua cocok.</p></div>
+        <div class="feat reveal" style="transition-delay:.05s"><i class="fa-solid fa-shield-heart"></i><h3>Higienis terjaga</h3><p>Cuci-bilas-steril tiap galon. Tutup baru & segel setiap isi.</p></div>
+        <div class="feat reveal" style="transition-delay:.1s"><i class="fa-solid fa-stopwatch"></i><h3>Antar 30 menit*</h3><p>Armada dekat Jl. Sutan Syahrir. Telat? Kami kabari jujur, bukan janji kosong.</p></div>
+        <div class="feat reveal" style="transition-delay:.15s"><i class="fa-solid fa-hand-holding-heart"></i><h3>Pelayanan ramah</h3><p>WA dibalas cepat 07.00–21.00. Bisa titip galon & jadwal langganan.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONI BINTANG 5 GOOGLE MAPS -->
+  <section id="testimoni" class="section" style="background:#fff;border-top:1px solid var(--slate-100);border-bottom:1px solid var(--slate-100)">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">Ulasan Pelanggan</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.05rem)">Bintang 5 dari Google Maps</h2>
+        <p>Ulasan asli pilihan bintang 5 — klik untuk verifikasi langsung di Google Maps.</p>
+      </div>
+      <div class="rev-grid">
+        <article class="rev reveal">
+          <div class="rev-head">
+            <span class="rev-avatar" style="background:linear-gradient(135deg,#0a3d62,#0ea5e9)">A</span>
+            <div>
+              <div class="rev-name">Agustina Ustinova</div>
+              <div class="rev-meta">Local Guide · 36 ulasan · 1 foto</div>
+            </div>
+          </div>
+          <div class="stars" aria-label="Rating 5 dari 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="rev-text">“Tokonya lengkap yang jual juga ramah”</p>
+          <div class="rev-foot">
+            <span><i class="fa-brands fa-google" style="color:var(--aqua-3)"></i> Ulasan Google Maps · Terverifikasi</span>
+            <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700;white-space:nowrap">Lihat di Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+        <article class="rev reveal" style="transition-delay:.07s">
+          <div class="rev-head">
+            <span class="rev-avatar" style="background:#c2185b">H</span>
+            <div>
+              <div class="rev-name">Hera Hapsari</div>
+              <div class="rev-meta">9 ulasan · 4 foto · 5 tahun lalu</div>
+            </div>
+          </div>
+          <div class="stars" aria-label="Rating 5 dari 5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          <p class="rev-text">“penjual ramah, airnya bersih.. sudah bersertifikat..”</p>
+          <div class="rev-foot">
+            <span><i class="fa-brands fa-google" style="color:var(--aqua-3)"></i> Ulasan Google Maps · Terverifikasi</span>
+            <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" style="color:var(--navy);font-weight:700;white-space:nowrap">Lihat di Maps <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="reveal" style="text-align:center;margin-top:22px">
+        <span class="badge" style="text-transform:none;letter-spacing:0;font-size:.86rem"><i class="fa-solid fa-star" style="color:#FBBC04"></i> 5.0 dari 2 ulasan pilihan bintang 5</span>
+        <p style="margin-top:10px;font-size:.82rem;color:var(--slate-500)">Menampilkan hanya ulasan bintang 5. Lihat semua ulasan di Google Maps.</p>
+        <div style="margin-top:14px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" class="btn btn-primary"><i class="fa-solid fa-location-arrow"></i> Lihat Semua Ulasan di Google Maps</a>
+          <a href="https://www.google.com/maps/search/Toko+Soma,+Jl.+Sutan+Syahrir+No.+241,+Banjarsari,+Surakarta" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-solid fa-pen-to-square"></i> Tulis Ulasan Bintang 5</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAK & LOKASI — merged single section -->
+  <section id="kontak" class="section">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom:22px">
+        <div class="kicker">Kontak & Lokasi</div>
+        <h2 style="font-size:clamp(1.6rem,3vw,2.05rem)">Hubungi & Temui Toko Soma di Kestalan</h2>
+        <p>Satu tempat untuk chat, telepon, atau datang langsung — <b style="color:var(--navy)">Jl. Sutan Syahrir No. 241, Kestalan, Kec. Banjarsari, Kota Surakarta 57133</b> (dekat Pasar Legi). Buka setiap hari <b style="color:var(--navy)">07.00–21.00 WIB</b>.</p>
+      </div>
+      <div class="kontak-grid">
+      <div class="card contact-card reveal">
+        <div class="kicker" style="color:var(--aqua-3)">Hubungi Kami • Respon Cepat</div>
+        <h3 style="font-size:1.28rem;margin-top:4px;color:var(--navy);font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:-.02em">Chat, telepon, atau mampir</h3>
+        <p style="color:var(--slate-500);font-size:.88rem;margin-top:6px">WhatsApp aktif 07.00–21.00 — klik nomor untuk chat otomatis.</p>
+        <div class="info-list">
+          <div class="info">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <b style="color:var(--navy)">Alamat Toko</b><br>
+              <span style="font-size:.92rem">Jl. Sutan Syahrir No. 241, Kestalan, Kec. Banjarsari, Kota Surakarta, Jawa Tengah 57133</span>
+            </div>
+          </div>
+          <div class="info">
+            <i class="fa-brands fa-whatsapp" style="color:var(--green)"></i>
+            <div>
+              <b style="color:var(--navy)">WhatsApp / Telepon</b><br>
+              <a href="https://wa.me/6282236839529" target="_blank" rel="noopener" style="font-size:1.05rem">0822-3683-9529</a><br><span style="font-size:.84rem;color:var(--slate-500)">Klik untuk chat otomatis • format wa.me/6282236839529</span>
+            </div>
+          </div>
+          <div class="info">
+            <i class="fa-regular fa-clock"></i>
+            <div><b style="color:var(--navy)">Jam Operasional</b><br><span style="font-size:.92rem">Setiap hari <b>07.00–21.00 WIB</b></span><br><span style="font-size:.82rem;color:var(--slate-500)">Di luar jam, chat akan dibalas pagi berikutnya.</span></div>
+          </div>
+        </div>
+        <div id="kenaliToko" style="margin-top:14px;display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--slate-200);border-radius:16px;padding:10px 12px;cursor:pointer;transition:.2s" role="button" tabindex="0" aria-label="Lihat foto Toko Soma dari depan">
+          <img src="assets/storefront.png" alt="Thumbnail Toko Soma tampak depan" loading="lazy" width="72" height="72" style="width:56px;height:56px;border-radius:10px;object-fit:cover;border:1px solid var(--slate-200);flex:0 0 56px">
+          <div style="flex:1;min-width:0">
+            <b style="color:var(--navy);font-size:.88rem;display:flex;gap:.35rem;align-items:center"><i class="fa-solid fa-eye" style="color:var(--aqua-3)"></i> Kenali Toko Kami</b>
+            <span style="font-size:.78rem;color:var(--slate-500)">Papan hijau “TOKO SOMA” • Etalase kaca • Parkir motor depan toko</span>
+          </div>
+          <span style="font-size:.72rem;font-weight:700;color:var(--navy);background:#e6f6ff;padding:.32rem .55rem;border-radius:999px;white-space:nowrap">Lihat foto</span>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20mau%20pesan%20antar%20sekarang." target="_blank" rel="noopener" class="btn btn-aqua" style="flex:1"><i class="fa-brands fa-whatsapp"></i> Chat Sekarang</a>
+          <a href="tel:+6282236839529" class="btn btn-ghost"><i class="fa-solid fa-phone"></i> Telepon</a>
+        </div>
+      </div>
+
+      <div class="map-wrap reveal" style="transition-delay:.06s">
+        <div style="padding:16px 16px 0;display:flex;justify-content:space-between;align-items:center;gap:12px">
+          <div>
+            <h3 style="font-size:1.1rem">Peta Lokasi — Kestalan, Banjarsari</h3>
+            <p style="font-size:.84rem;color:var(--slate-500)">Jl. Sutan Syahrir No. 241, Kota Surakarta 57133 — ketuk peta untuk navigasi langsung</p>
+          </div>
+          <span style="font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:#e6f6ff;color:var(--navy);padding:.3rem .55rem;border-radius:999px;white-space:nowrap">Banjarsari • Solo</span>
+        </div>
+        <div style="padding:14px">
+          <iframe
+            src="https://www.google.com/maps?q=Toko+Soma,+Jl.+Sutan+Syahrir+No.+241,+Banjarsari,+Surakarta&z=17&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Peta Toko Soma Jl. Sutan Syahrir No. 241 Surakarta"
+            allowfullscreen></iframe>
+        </div>
+        <div class="map-actions">
+          <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" class="btn btn-primary" style="flex:1"><i class="fa-solid fa-location-arrow"></i> Buka di Google Maps (share.google)</a>
+          <a href="https://www.google.com/maps/search/Toko+Soma,+Jl.+Sutan+Syahrir+No.+241,+Banjarsari,+Surakarta" target="_blank" rel="noopener" class="btn btn-ghost"><i class="fa-solid fa-magnifying-glass-location"></i> Fallback Search</a>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container foot-grid">
+    <div class="foot-brand">
+      <div style="display:flex;align-items:center;gap:.6rem;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem"><span style="width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:#fff;color:var(--navy)"><i class="fa-solid fa-droplet"></i></span> Toko Soma</div>
+      <p>Air minum higienis untuk keluarga Surakarta. Sejak 2018 — melayani rumah, kos, dan kantor dengan antar cepat dan proses steril.</p>
+      <div id="footerNib" role="button" tabindex="0" aria-label="Lihat NIB Resmi Toko Soma" style="margin-top:14px;display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);backdrop-filter:blur(6px);padding:8px 10px 8px 8px;border-radius:14px;cursor:pointer;transition:.2s">
+        <span style="width:42px;height:42px;border-radius:10px;overflow:hidden;background:#fff;display:grid;place-items:center;border:1px solid rgba(255,255,255,.6);flex:0 0 42px"><img src="assets/nib.webp" alt="Badge NIB Toko Soma" loading="lazy" width="42" height="42" style="width:100%;height:100%;object-fit:cover;object-position:center top"></span>
+        <span style="line-height:1.2;text-align:left">
+          <b style="color:#fff;font-size:.82rem;display:flex;align-items:center;gap:.35rem"><i class="fa-solid fa-award" style="color:#facc15"></i> Tersertifikasi Resmi</b>
+          <span style="color:#cbd5e1;font-size:.72rem;letter-spacing:.02em">NIB 8120116212506 • Sejak 10 Des 2018 • Klik lihat</span>
+        </span>
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        <a href="https://wa.me/6282236839529" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;background:var(--green);color:#fff;padding:.5rem .75rem;border-radius:999px;font-weight:700;font-size:.86rem"><i class="fa-brands fa-whatsapp"></i> 0822-3683-9529</a>
+        <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;background:#fff;color:var(--navy);padding:.5rem .75rem;border-radius:999px;font-weight:700;font-size:.84rem"><i class="fa-solid fa-location-dot"></i> Jl. Sutan Syahrir No. 241</a>
+      </div>
+    </div>
+    <div>
+      <b style="color:#fff">Navigasi</b>
+      <div style="margin-top:10px;display:grid;gap:8px;font-size:.92rem">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#produk">Produk</a>
+        <a href="#keunggulan">Keunggulan</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#kontak">Kontak & Lokasi</a>
+      </div>
+    </div>
+    <div>
+      <b style="color:#fff">Alamat Lengkap</b>
+      <p style="margin-top:10px;font-size:.9rem;line-height:1.7">Jl. Sutan Syahrir No. 241, Kestalan,<br>Kec. Banjarsari, Kota Surakarta<br>Jawa Tengah 57133<br>Buka 07.00–21.00 WIB setiap hari</p>
+      <p style="margin-top:8px;font-size:.82rem;color:#94a3b8"><a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" style="color:#7dd3fc"><i class="fa-solid fa-location-dot"></i> Buka di Google Maps</a></p>
+    </div>
+  </div>
+  <div class="container copy">
+    <span>© 2026 Toko Soma — Air Minum Sehat untuk Keluarga Surakarta.</span>
+    <span>Banderas Wirabumi Sunyoto — Kerja Praktek</span>
+  </div>
+</footer>
+
+<!-- Lightbox: Storefront -->
+<div class="lightbox" id="lightboxStore" aria-hidden="true" role="dialog" aria-label="Foto Toko Soma">
+  <div class="lightbox-panel">
+    <div class="lightbox-head">
+      <div>
+        <b><i class="fa-solid fa-store" style="color:var(--navy)"></i> Toko Soma — Foto Asli</b><br>
+        <span>Jl. Sutan Syahrir No.241, Kestalan, Banjarsari • Papan hijau & etalase kaca</span>
+      </div>
+      <button class="lightbox-close" data-close="lightboxStore" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img class="lightbox-img" src="assets/storefront.png" alt="Foto asli Toko Soma tampak depan — papan nama hijau, etalase kaca, motor terparkir" loading="lazy">
+    <div class="lightbox-foot">
+      <p><i class="fa-solid fa-location-dot" style="color:var(--aqua-3)"></i> Kenali toko dari jalan — dekat Pasar Legi, Solo. Parkir luas, buka 07.00–21.00.</p>
+      <a href="https://share.google/80jHfEQTl3V8wjQzo" target="_blank" rel="noopener" class="btn btn-primary" style="padding:.55rem 1rem;font-size:.86rem"><i class="fa-solid fa-location-arrow"></i> Buka Maps</a>
+    </div>
+  </div>
+</div>
+<!-- Lightbox: NIB -->
+<div class="lightbox" id="lightboxNib" aria-hidden="true" role="dialog" aria-label="Dokumen NIB Toko Soma">
+  <div class="lightbox-panel">
+    <div class="lightbox-head">
+      <div>
+        <b><i class="fa-solid fa-certificate" style="color:#c9a86a"></i> Legalitas Resmi — NIB 8120116212506</b><br>
+        <span>Toko Soma • Jl. Sutan Syahrir No.241 • Diterbitkan 10 Desember 2018 • Garuda emblem</span>
+      </div>
+      <button class="lightbox-close" data-close="lightboxNib" aria-label="Tutup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <img class="lightbox-img" src="assets/nib.webp" alt="Dokumen NIB Toko Soma nomor 8120116212506" loading="lazy" style="object-fit:contain;max-height:68vh;background:#fff;padding:12px">
+    <div class="lightbox-foot">
+      <p style="font-size:.82rem"><i class="fa-solid fa-shield-halved" style="color:var(--green)"></i> Dokumen asli hanya untuk verifikasi kepercayaan — data alamat dan NIB dapat dicocokkan.</p>
+      <span style="font-size:.72rem;font-weight:700;background:#f1f5f9;color:var(--navy);padding:.32rem .6rem;border-radius:999px;border:1px solid var(--slate-200)"><i class="fa-regular fa-calendar"></i> Terdaftar sejak 2018</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('navLinks');
+ham?.addEventListener('click', ()=>{
+  const open = nav.classList.toggle('open');
+  ham.setAttribute('aria-expanded', open ? 'true':'false');
+  ham.innerHTML = open ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+});
+document.querySelectorAll('.nav-links a').forEach(a=>{
+  a.addEventListener('click', ()=>{
+    if(window.innerWidth <= 980){ nav.classList.remove('open'); ham.setAttribute('aria-expanded','false'); ham.innerHTML='<i class="fa-solid fa-bars"></i>'; }
+  });
+});
+// active nav on scroll
+const sections = [...document.querySelectorAll('section[id]')];
+const links = [...document.querySelectorAll('.nav-links a')];
+const obs = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id = e.target.id;
+      links.forEach(l=> l.classList.toggle('active', l.getAttribute('href')==='#'+id));
+    }
+  });
+},{rootMargin:'-45% 0px -45% 0px', threshold:0});
+sections.forEach(s=> obs.observe(s));
+// reveal
+const reveals = document.querySelectorAll('.reveal');
+const ro = new IntersectionObserver(es=>{
+  es.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); ro.unobserve(en.target); }});
+},{threshold:.12});
+reveals.forEach(r=> ro.observe(r));
+// lightbox logic — storefront + NIB
+function bindLightbox(triggerIds, lightboxId){
+  const lb = document.getElementById(lightboxId);
+  if(!lb) return;
+  const open = ()=>{ lb.classList.add('open'); lb.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; };
+  const close = ()=>{ lb.classList.remove('open'); lb.setAttribute('aria-hidden','true'); document.body.style.overflow=''; };
+  triggerIds.forEach(id=>{
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.addEventListener('click', open);
+    el.addEventListener('keydown', e=>{ if(e.key==='Enter' || e.key===' '){ e.preventDefault(); open(); }});
+  });
+  lb.addEventListener('click', e=>{ if(e.target===lb) close(); });
+  lb.querySelectorAll('[data-close]').forEach(b=> b.addEventListener('click', close));
+  document.addEventListener('keydown', e=>{ if(e.key==='Escape') close(); });
+}
+bindLightbox(['openStorefront','kenaliToko'], 'lightboxStore');
+bindLightbox(['openNib1','footerNib'], 'lightboxNib');
+</script>
+</body>
+</html>

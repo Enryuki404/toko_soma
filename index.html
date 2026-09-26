@@ -177,7 +177,7 @@ img{max-width:100%}
 .prod .btn:hover{background:var(--green);border-color:var(--green);color:#fff}
 
 /* KEUNGGULAN */
-.feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
 @media(max-width:980px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
 .feat{background:#fff;border:1px solid var(--slate-200);border-radius:22px;padding:20px;box-shadow:var(--shadow);transition:.2s}
@@ -447,6 +447,7 @@ footer a:hover{color:#fff}
         <div class="feat reveal" style="transition-delay:.05s"><i class="fa-solid fa-shield-heart"></i><h3>Higienis terjaga</h3><p>Cuci-bilas-steril tiap galon. Tutup baru & segel setiap isi.</p></div>
         <div class="feat reveal" style="transition-delay:.1s"><i class="fa-solid fa-stopwatch"></i><h3>Antar 30 menit*</h3><p>Armada dekat Jl. Sutan Syahrir. Telat? Kami kabari jujur, bukan janji kosong.</p></div>
         <div class="feat reveal" style="transition-delay:.15s"><i class="fa-solid fa-hand-holding-heart"></i><h3>Pelayanan ramah</h3><p>WA dibalas cepat 07.00–21.00. Bisa titip galon & jadwal langganan.</p></div>
+        <div class="feat reveal" style="transition-delay:.2s"><i class="fa-solid fa-flask-vial"></i><h3>Teruji Lab Dinkes</h3><p>E.coli 0/100 ml — lulus uji bakteriologis Dinkes Surakarta 2023. <span id="openLab2" role="button" tabindex="0" style="color:var(--aqua-3);font-weight:700;cursor:pointer;white-space:nowrap">Lihat hasil lab <i class="fa-solid fa-arrow-up-right-from-square"></i></span></p></div>
       </div>
     </div>
   </section>
@@ -754,7 +755,7 @@ function bindLightbox(triggerIds, lightboxId){
 }
 bindLightbox(['openStorefront','kenaliToko'], 'lightboxStore');
 bindLightbox(['openNib1','footerNib'], 'lightboxNib');
-bindLightbox(['openLab1'], 'lightboxLab');
+bindLightbox(['openLab1','openLab2'], 'lightboxLab');
 bindLightbox(['openGalon1'], 'lightboxGalon');
 bindLightbox(['openTangki1'], 'lightboxTangki');
 </script>

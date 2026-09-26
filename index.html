@@ -215,6 +215,15 @@ img{max-width:100%}
 .reveal{opacity:0;transform:translateY(10px);transition:.6s ease}
 .reveal.in{opacity:1;transform:none}
 :focus-visible{outline:2px solid var(--aqua-3);outline-offset:2px}
+/* FLOATING BUTTONS — WA + Instagram, mengikuti scroll */
+.fab-stack{position:fixed;right:18px;bottom:18px;z-index:80;display:flex;flex-direction:column;gap:10px}
+.fab{position:relative;width:52px;height:52px;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:1.45rem;box-shadow:0 10px 24px rgba(0,0,0,.22);transition:transform .2s ease}
+.fab:hover{transform:scale(1.08)}
+.fab-wa{background:#25d366}
+.fab-ig{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
+.fab-tip{position:absolute;right:60px;top:50%;transform:translateY(-50%) translateX(6px);background:var(--navy);color:#fff;font-size:.76rem;font-weight:600;padding:.4rem .65rem;border-radius:999px;white-space:nowrap;opacity:0;pointer-events:none;transition:.2s}
+.fab:hover .fab-tip{opacity:1;transform:translateY(-50%) translateX(0)}
+@media(max-width:560px){.fab-stack{right:14px;bottom:14px}.fab{width:48px;height:48px;font-size:1.3rem}}
 footer{background:var(--navy);color:#cbd5e1}
 footer a{color:#e2e8f0}
 footer a:hover{color:#fff}
@@ -607,6 +616,11 @@ footer a:hover{color:#fff}
 </footer>
 
 <!-- Lightbox: Storefront -->
+<!-- Floating: WhatsApp + Instagram -->
+<div class="fab-stack" aria-label="Kontak cepat">
+  <a href="https://www.instagram.com/tokosoma/" target="_blank" rel="noopener" class="fab fab-ig" aria-label="Buka Instagram Toko Soma"><i class="fa-brands fa-instagram"></i><span class="fab-tip">Instagram @tokosoma</span></a>
+  <a href="https://wa.me/6282236839529?text=Halo%20Toko%20Soma%2C%20mau%20pesan%20antar%20sekarang." target="_blank" rel="noopener" class="fab fab-wa" aria-label="Chat WhatsApp Toko Soma"><i class="fa-brands fa-whatsapp"></i><span class="fab-tip">Chat WhatsApp</span></a>
+</div>
 <div class="lightbox" id="lightboxStore" aria-hidden="true" role="dialog" aria-label="Foto Toko Soma">
   <div class="lightbox-panel">
     <div class="lightbox-head">
